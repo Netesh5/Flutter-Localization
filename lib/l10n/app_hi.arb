@@ -1,7 +1,8 @@
 {
+    "@@locale": "hi",
     "login":"लॉगिन",
     "email":"ईमेल",
-    "enter email":"ईमेल दर्ज करें",
+    "enterEmail":"ईमेल दर्ज करें",
     "password":"पासवर्ड",
-    "enter password":"पासवर्ड दर्ज करें",
+    "enterPassword":"पासवर्ड दर्ज करें"
 }

@@ -1,7 +1,8 @@
 {
+    "@@locale": "en",
     "login":"Login",
     "email":"Email",
-    "enter email":"Enter Email",
+    "enterEmail":"Enter Email",
     "password":"Password",
-    "enter password":"Enter Password",
+    "enterPassword":"Enter Password"
 }

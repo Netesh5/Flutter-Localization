@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:localizationapp/Data/Repository/language.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:localizationapp/main.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -9,7 +11,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Login"),
+        title: Text(AppLocalizations.of(context)!.login),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
@@ -36,7 +38,11 @@ class LoginScreen extends StatelessWidget {
                               ],
                             )))
                     .toList(),
-                onChanged: (Language? language) {}),
+                onChanged: (Language? language) {
+                  if (language != null) {
+                    MyApp.setLocale(context, Locale(language.languageCode));
+                  }
+                }),
           )
         ],
       ),
@@ -48,18 +54,20 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const Text("Email"),
+            Text(AppLocalizations.of(context)!.email),
             TextFormField(
-              decoration: const InputDecoration(
-                  hintText: "Enter Email", border: OutlineInputBorder()),
+              decoration: InputDecoration(
+                  hintText: AppLocalizations.of(context)!.enterEmail,
+                  border: const OutlineInputBorder()),
             ),
             const SizedBox(
               height: 30,
             ),
-            const Text("Password"),
+            Text(AppLocalizations.of(context)!.password),
             TextFormField(
-              decoration: const InputDecoration(
-                  hintText: "Enter Password", border: OutlineInputBorder()),
+              decoration: InputDecoration(
+                  hintText: AppLocalizations.of(context)!.enterPassword,
+                  border: const OutlineInputBorder()),
             ),
             const SizedBox(
               height: 30,
@@ -67,7 +75,7 @@ class LoginScreen extends StatelessWidget {
             Center(
               child: CupertinoButton(
                   color: Colors.blueAccent,
-                  child: const Text("Login"),
+                  child: Text(AppLocalizations.of(context)!.login),
                   onPressed: () {}),
             )
           ],

@@ -13,7 +13,7 @@ class Language {
 
   static List<Language> languageList() {
     return <Language>[
-      Language(id: 1, flag: "🇳🇵", name: "नेपाली", languageCode: "np"),
+      Language(id: 1, flag: "🇳🇵", name: "नेपाली", languageCode: "no"),
       Language(id: 2, flag: "🇺🇸", name: "English", languageCode: "en"),
       Language(id: 3, flag: "🇮🇳", name: "हिन्दी", languageCode: "hi"),
       Language(id: 4, flag: "🇯🇵", name: "日本", languageCode: "ja")
